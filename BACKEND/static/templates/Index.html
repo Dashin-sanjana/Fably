@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Accessory Matching with Outfits</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <form class="container" id="uploadForm">
+            <h2>Accessory Matching with Outfits</h2>
+
+            <div id="">
+                <label for="accessory"><strong>Upload Accessory Image</strong></label>  
+                <input type="file" id="accessory" accept="image/*" required>
+
+                <label for="outfit"><strong>Upload Outfit Image</strong></label>
+                <input type="file" id="outfit" accept="image/*" required>
+            </div>
+
+            <button type="button" onClick="uploadForm()">Match Images</button>
+
+            <div id="results"></div>
+        </form>
+
+        <script>
+            function uploadForm() {
+                const form = document.getElementById('uploadForm');
+                const resultsCss = document.getElementById('results');
+                const formData = new FormData(form);
+
+                fetch('/upload', {methods: "POST", body: formData}).then(response => response.json()).then(data => {
+                    if (data.error) {
+                        resultsCss.innerHTML = `<p style="color: red;">${data.error}<p>`;
+                    }else{
+                        resultsCss.innerHTML = `<p><strong>Pretrained Accessory Prediction: </strong>${data["pretrained accessory prediction"]}<p>
+                                                <p><strong>Pretrained Accessory Confidence: </strong>${data["pretrained accessory confidence"]}<p>
+                                                <p><strong>Pretrained Accessory Match: </strong>${data["pretrained accessory match found"]}<p>
+                                                
+                                                <p><strong>Pretrained Outfit Prediction: </strong>${data["pretrained outfit prediction"]}<p>
+                                                <p><strong>Pretrained Outfit Confidence: </strong>${data["pretrained outfit confidence"]}<p>
+                                                <p><strong>Pretrained Outfit Match: </strong>${data["pretrained outfit match found"]}<p>
+                                                
+                                                <p><strong>Color Match: </strong>${data["pretrained match found message"] === "Pretrained Match Found!"}<p>`;
+                    }
+                }).catch(error => {
+                    console.error("Error", error);
+                    resultsCss.innerHTML = "<p>An Error Ocurred! Pls Try again Later...<p>";
+                });
+            }
+        </script>
+    </body>
+</html>
