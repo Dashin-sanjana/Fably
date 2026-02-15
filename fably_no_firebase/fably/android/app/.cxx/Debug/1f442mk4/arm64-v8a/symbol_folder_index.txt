@@ -1,0 +1,1 @@
+/Users/binadahettiarachchi/Documents/git_project_fably/Fably/fably_no_firebase/fably/build/app/intermediates/cxx/Debug/1f442mk4/obj/arm64-v8a

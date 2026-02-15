@@ -1,0 +1,69 @@
+name: fably
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  #sdk: ^3.6.0
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  #firebase_auth: ^5.3.4
+  #firebase_core: ^3.9.0
+  google_sign_in: ^5.2.1
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.2.2
+  camera: ^0.10.5+9
+  image_picker: ^1.0.7
+  http: ^1.1.0
+  liquid_pull_to_refresh: ^3.0.0
+  flutter_slidable: ^4.0.0
+  #flutter_slidable: ^0.6.0
+  #flutter_stripe: ^8.0.0
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
+  min_sdk_android: 21
+  web:
+    generate: true
+    image_path: "assets/icon/icon.png"
+    background_color: "#000000"
+    theme_color: "#000000"
+  windows:
+    generate: true
+    image_path: "assets/icon/icon.png"
+    icon_size: 48
+  macos:
+    generate: true
+    image_path: "assets/icon/icon.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/google_logo.png
+    - assets/black_male_suite.webp
+    - assets/black_suite_woman.avif
+    - assets/black_dress.jpg
+    - assets/hoodie.webp
+
+  fonts:
+    - family: Italiana
+      fonts:
+        - asset: fonts/Italiana-Regular.ttf
+    - family: Jura
+      fonts:
+        - asset: fonts/Jura-Regular.ttf

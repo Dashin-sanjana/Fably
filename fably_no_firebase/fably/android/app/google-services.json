@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "490799617199",
+    "project_id": "fably-8b115",
+    "storage_bucket": "fably-8b115.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490799617199:android:57b9a631fcd20bba10f05a",
+        "android_client_info": {
+          "package_name": "com.example.fably"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490799617199-idkr6o1kp93j22fl9v0sr09jbetmf450.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fably",
+            "certificate_hash": "4cd2f023789876368a2c2f5c23f7801d8d626ce8"
+          }
+        },
+        {
+          "client_id": "490799617199-p96i4mkusuaaq9hiup880g83ab9qefrs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsatDAPpVBOouPfvFB3mDBOkOngNq49gE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490799617199-p96i4mkusuaaq9hiup880g83ab9qefrs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
